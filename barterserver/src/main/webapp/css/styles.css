@@ -1,0 +1,122 @@
+html,
+body {
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+}
+
+#capaEsquerda{
+    float: left;
+    width: 400px;
+    margin-left: 80px;
+    font-size: 12px;
+    text-align: justify;
+}
+
+#capaDireita{
+    float: left;
+    width: 380px;
+    margin-left: 80px;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    
+}
+
+.ideaMeNav{
+    background-color: #113d7c !important;
+    border-color: #203a7c;
+    background-image: none;
+    box-shadow: 0 1px 0 rgba(3, 1, 3, 0.10);
+
+}
+
+.ideaMeNav .navbar-brand {
+    color: #fff;
+}
+
+.ideaMeNav a{
+    color: #2142c6;
+}
+
+.ideaMeHeader{
+    padding: 70px 15px 70px;
+    font-size: 16px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0,0,0,.15);
+    color: #c5dbff;
+    background-color: #113d7c;
+    font-size: 21px;
+    text-align: left;
+    margin-top: 35px;
+}
+
+.ideaMeMarketing{
+    padding: 90px 0px 65px;
+}
+
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -60px;
+}
+
+#push,
+#footer {
+    height: 60px;
+}
+
+#footer {
+    background-color: #ffffff;
+}
+
+.ideaMeNav .navbar-nav>.active>a {
+    background-image: none;
+    background-image: none;
+    background-repeat: repeat-x;
+    background-color: rgba(255, 255, 255, 0.2);
+    filter: none;
+    -webkit-box-shadow: inset 0 3px 9px rgba(0,0,0,0.25);
+    box-shadow: inset 0 3px 9px rgba(32, 58, 124, 0.10);
+}
+
+.ideaMeNav .navbar-nav>li>a{
+    color: #ffffff;
+}
+
+.ideaMeNav .navbar-nav>li>a:hover {
+    background-image: none;
+    background-image: none;
+    background-repeat: repeat-x;
+    background-color: rgba(255, 255, 255, 0.2);
+    filter: none;
+    -webkit-box-shadow: inset 0 3px 9px rgba(0,0,0,0.25);
+    box-shadow: inset 0 3px 9px rgba(32, 58, 124, 0.10);
+}
+
+
+.ideaMeNav .navbar-nav>.active>a:hover {
+    background-image: none;
+    background-image: none;
+    background-repeat: repeat-x;
+    background-color: rgba(255, 255, 255, 0.2);
+    filter: none;
+    -webkit-box-shadow: inset 0 3px 9px rgba(0,0,0,0.25);
+    box-shadow: inset 0 3px 9px rgba(32, 58, 124, 0.10);
+}
+
+.content{
+    padding-top: 16px ;
+}
+
+@media (max-width: 767px) {
+    #footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+

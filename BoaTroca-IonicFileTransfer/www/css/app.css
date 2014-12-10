@@ -1,0 +1,273 @@
+/* Your app's CSS, go crazy, make it your own */
+
+.loading-icon{
+	font-size: 60px !important;
+	background-color: transparent !important;
+	margin-left: auto !important; margin-right: auto !important;
+	margin-top: 60% !important;
+}
+
+.loading{
+	width: 100% !important;
+	height: 100% !important;
+	background-color: transparent !important;
+}
+
+.hide-footer .bar-footer, .hide-footer .tabs {
+display: flex;
+}
+.hide-footer .has-footer, .hide-footer .has-tabs {
+bottom: 44px; 
+}
+
+textarea{
+	height: 50px !important;
+}
+
+.icon, .fa-bars{
+	color: #FFAB49 !important;
+}
+
+.bar-left-menu{
+	background-image: url(../img/gray-logo.png) !important;
+	background-repeat: repeat !important;
+	background-size: 5% !important;
+}
+
+.background-login{
+	width: 100%;
+	height: 60px;
+	background-size: 18%;
+	background-repeat: repeat;
+	border: none;
+	margin: 0px 0px 0px 0px;
+}
+
+.slogan{ 
+	color:white;
+	margin-left: auto; margin-right: auto;
+	font:sans-serif;
+	font-size: 17px;
+	width: 100%;
+	text-align: center;
+	margin-top: 0px;
+}
+
+.addPhoto{	
+	background-image: url(../img/camera.png);
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: center center;	
+}
+
+.publishPhotoButton{
+	width: 50% !important;
+	height: 100px !important;
+	margin: 0px 0px 0px 0px !important;
+}
+
+.logoTitle{
+	width: 30%;
+}
+
+.bar-positive{
+	background-color: #3372BA !important;
+}
+
+.bar-energized{
+	background-color: #FF9702 !important;
+}
+
+.col{
+	text-align: center;
+}
+
+.ion-search, .fa-chevron-circle-right{
+	margin: 0px 13px 0px 13px;
+}
+
+.search-product{
+	border-color: #3372BA;
+	font-size: 25px !important; 
+	color: white !important;
+	background-color: #3372BA !important; 
+  	line-height: 2.1;
+  	margin: 0px 2px 0px 2px;
+}
+
+.search-product input{
+	font-size: 18px !important; 
+	color: white !important;
+}
+
+
+.ion-navicon-round, .ion-search{
+	color: #FFAB49 !important;
+}
+
+.ion-looping {
+  color: #f59c00;
+}
+
+.ionic-logo {
+  display: block;
+  margin: 15px auto;
+  width: 96px;
+  height: 96px;
+}
+
+.item-body > p {
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+.button-facebook-connet{
+	background-color: #304C84;
+	color: #ffffff;
+	border: none;
+	font-size: 18px !important;
+}
+
+.button-facebook-connet:hover{
+	background-color: #304C84;
+	color: #ffffff;
+	border: none;
+}
+
+.center-image{
+	margin: 0 auto;
+}
+
+#logoLogin-image{
+	height: 200px;
+}
+
+#logoLogin-div{
+	margin-top: 40px;
+}
+
+#facebookLoginText{
+	color: #ffffff;
+	font-size: 25px;
+	font: Arial, Helvetica;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+#facebookLoginButton{
+	margin-top: 40px;
+}
+
+/**************************************************/
+
+.list card{
+	background-color:  #ececec;
+}
+
+.back-collor{
+	background-color: #92A0BD;
+}
+
+.btn-confirma{
+	background-color: #EDA102;
+}
+.btn-cancel{
+	background-color: #666666;
+}
+
+.box-width{
+	width: 80%;
+}
+
+.img-home{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #E5E5E5;
+	margin: 2% 1% 2% 1%;
+	padding: 2% 0 2% 0;
+	background-image: url(../img/background-publishButton.png);
+	background-repeat: repeat;
+	background-size: 30%;
+}
+
+#buscaHome::-webkit-input-placeholder { color:#fff; }
+
+#imageId{
+	border: none;
+}
+
+#menu_right{
+	background-color: #fff;
+	color: #0077B7;
+}
+
+.picturesRef {
+	color: #eca000;
+}
+
+.tradesBtn {
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+.pictureTitle {
+	background-color: #ececec;
+	border: 0px;
+	margin-bottom: 0px;
+	padding: 5px;
+	font-size: 16px;color: #476cbd;
+}
+
+.pictureImageBg{
+	background-color: #ececec;
+	border: 0px;
+	border-bottom: 1px solid #476cbd;
+	text-align: center;
+}
+
+.pictureImage {
+	background-color: #ccc;
+	width: 200px;
+	height: 280px;
+	margin-left: 40px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.pictureStatus{
+	background-color: #ececec;
+	border: 0px;
+	padding: 5px;
+	color: #476cbd;
+	font-size: 12px;
+}
+
+.picUserName{
+	width: 75%;
+	float: left;
+}
+
+.picTrade{
+	width: 25%;
+	float: right;
+	font-weight: bold;
+	color: #f59c00;
+}
+
+.tradeStatusFlag {
+	width: 20px;
+	height: 20px;
+	background-color: #eca000;
+	color: #fff;
+	float: right;
+	margin-right: 5px;
+	text-align: center;
+}
+
+a:link, a:visited, a:hover, a:active{
+    color: #3272B9;
+    text-decoration: none;
+}
+
+
+

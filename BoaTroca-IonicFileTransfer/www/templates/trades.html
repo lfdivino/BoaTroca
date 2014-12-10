@@ -1,0 +1,20 @@
+<!-- mypictures.html -->
+<ion-view title="Trades" hide-back-button="false">
+
+    <ion-content has-header="true" padding="true">
+
+        <h3>Trades:</h3>
+
+        <div ng-repeat="item in items">
+            <div>
+                <h3>Teste</h3>
+                <div>Figurinha: {{item.pictureRequiring_id}}</div>
+                <div>Usuário: {{item.userRequiring_id}}</div>
+                <div>
+                    <a class="button button-positive" id="trade{{item.pictureId}}" ng-click="match({{item.pictureId}}, {{item.ownerId}})">Trocar</a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+
+</ion-view>

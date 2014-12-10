@@ -1,0 +1,83 @@
+<!-- registerpicture.html -->
+<ion-view hide-back-button="true" title="Cadastrar Produto">
+    
+    <ion-nav-buttons side="left">
+        <button menu-toggle="'left'" class="button button-icon ion-navicon-round" ></button>
+    </ion-nav-buttons>
+  
+    <ion-nav-buttons side="right">
+        <button menu-toggle="'right'" ng-if="oldNewTrades == 0" class="button button-icon icon ion-loop"></button>
+        <button menu-toggle="'right'" ng-if="oldNewTrades == 1" class="button button-icon icon ion-looping" style="color: #f59c00"></button>
+    </ion-nav-buttons>
+
+    <ion-content has-header="true">
+    <!-- Cadastrar Figurinhas -->
+
+        <!-- Adiciona Foto -->
+        <div class="item item-image" style="border: none !important; margin-top:5%; margin-bottom:5%;">
+            <img class="addPhoto" ng-click="captureImage()" id="imageId" ng-src="" ng-model="picture.img" style="height:40%; width: 85%; margin-left: auto; margin-right: auto; border: none !important;">
+        </div>
+
+        <!--
+        <label class="back-collor item item-input">
+            <input type="text" ng-model="data.pictureNumber" placeholder="Nome do Produto" style="color: white;">
+        </label>
+        -->
+
+        <div class="list">
+
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Nome do Produto</span>
+            <input type="text" ng-model="data.productName" placeholder="Ex: Laptop">
+          </label>
+<!--
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Descrição</span>
+            <textarea placeholder="Ex: Samsung i3"></textarea>
+          </label>
+
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Categoria
+            </div>
+            <select>
+              <option>Jogos</option>
+              <option>Eletrônicos</option>
+              <option>Esportes</option>
+              <option>Ferramentas</option>
+              <option>Moda</option>
+              <option>DVD</option>
+              <option>Mobília</option>
+              <option>Livros</option>
+            </select>
+          </label>-->
+
+        </div>
+
+
+
+        <!--
+        <div class="item">
+            <button class="back-collor button button-block" ng-click="captureImage()">Tirar Foto</button>
+        </div>
+        -->
+
+        <!--
+        <div class="item card">
+            <div class="button-bar">
+                <a href="" class="button btn-cancel" ng-click="cancel()">Cancela</a>
+                <a href="" class="button btn-confirma" ng-click="send()">Confirma</a>
+            </div>
+        </div>
+        -->
+    </ion-content>
+
+    <ion-footer-bar class="bar-light">
+        <div ng-click="cancel()" class="publishPhotoButton">
+            <button class="button button-full button-energized">Cancelar</button>
+        </div>
+        <div ng-click="send()" class="publishPhotoButton">
+            <button class="button button-full button-balanced">Publicar</button>
+        </div>  
+    </ion-footer-bar>
+</ion-view>

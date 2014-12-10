@@ -1,0 +1,30 @@
+<!-- mypictures.html -->
+<ion-view title="Figurinhas" hide-back-button="false">
+
+    <ion-content has-header="true" padding="true">
+
+        <h3>Figurinhas do {{ownerName}}:</h3>
+
+        <div ng-repeat="item in items" class="list card" style="background-color: #ececec">
+
+            <div class="item item-avatar" style="background-color: #ececec; padding: 5px;font-size: 16px;color: #476cbd;border: 0px;font-weight: bold">
+                Número da figurinha: {{item.title}}
+            </div>
+
+            <div class="item item-image" style="border: 0px">
+                <img src="http://192.168.0.110/upload/pictures/{{item.pictureId}}">
+            </div>
+
+            <div class="item item-icon-left assertive" style="background-color: #476cbd; padding: 5px;border: 0px;color: #fff">
+                <div class="picUserName">
+
+                </div>
+                <div class="picTrade">
+                    <a ng-click="match(item.id)">Trocar</a>
+                </div>
+            </div>
+
+        </div>
+    </ion-content>
+
+</ion-view>

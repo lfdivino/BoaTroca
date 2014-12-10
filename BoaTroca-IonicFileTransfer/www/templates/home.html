@@ -1,0 +1,57 @@
+<ion-view hide-back-button="true" title="Home">
+    
+    <ion-nav-buttons side="left">
+        <button menu-toggle="'left'" class="button button-icon ion-navicon-round" ></button><!--<img src="img/logoTitle.png" class="logoTitle">-->
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+        <button menu-toggle="'right'" ng-if="oldNewTrades == 0" class="button button-icon icon ion-loop"></button>
+        <button menu-toggle="'right'" ng-if="oldNewTrades == 1" class="button button-icon icon ion-looping" style="color: #f59c00"></button>
+    </ion-nav-buttons>
+
+    <ion-content has-header="true" padding="false">
+
+        <div class="list">
+
+            <div class="item item-image img-home">
+                <a href="#/app/registerpicture"><img src="img/publishButton-edit.png" style="width: 55%" /></a>
+            </div>
+
+            <!-- Search -->
+            <label class="item item-input search-product"> 
+              <i class="icon ion-search"></i>             
+              <input type="text" placeholder="Nome do Produto" id="buscaHome" ng-model="data.numfigurinha">
+              <i class="fa fa-chevron-circle-right" ng-click="pesquisar()"></i>
+            </label>
+
+            <!-- Carousel -->
+
+
+            <!-- Recent Matches -->
+            <div class="card">
+              <div class="item item-text-wrap">
+                Combinações Recentes
+              </div>
+              <div class="item item-text-wrap">
+                ...
+              </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="row">
+              <div class="col"><a href="#/app/categories"><img src="img/icons/game_controller.png" /><br/>Jogos</a></div>
+              <div class="col"><a href="#/app/categories"><img src="img/icons/Laptop.png" /><br/>Eletrônicos</a></div>
+              <div class="col"><a href="#/app/categories"><img src="img/icons/Basketball.png" /><br/>Esporte</a></div>
+              <div class="col" style="font-size: 13px;"><a href="#/app/categories"><img src="img/icons/Tools.png" /><br/>Ferramentas</a></div>
+            </div>
+            <div class="row">
+              <div class="col"><a href="#/app/categories"><img src="img/icons/glasses.png" /><br/>Moda</a></div>
+              <div class="col"><a href="#/app/categories"><img src="img/icons/Filmroll.png" /><br/>Filmes</a></div>
+              <div class="col"><a href="#/app/categories"><img src="img/icons/Sofa.png" /><br/>Mobília</a></div>
+              <div class="col"><a href="#/app/categories"><img src="img/icons/Book.png" /><br/>Livros</a></div>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>
+
