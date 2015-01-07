@@ -1,5 +1,25 @@
 /* Your app's CSS, go crazy, make it your own */
 
+.title-rm{
+	width: 100%;
+	text-align: center;
+	color: #C7C7C7;
+	margin: 1% 0 0 0;
+}
+
+.recent-matches{
+	height: 100px;
+	width: 32%;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #E5E5E5;
+	margin: 0% 0% 1% 1%;
+	padding: 0% 0 1% 0;
+	float: left;
+	background-image: url(../img/recent-matches-image.png);
+	background-size: 95%;
+}
+
 .loading-icon{
 	font-size: 60px !important;
 	background-color: transparent !important;

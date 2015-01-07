@@ -16,7 +16,7 @@
                 Anunciar
             </ion-item>
             
-            <div class="list card" ng-repeat="item in items | orderBy: predicate='title'">
+            <div class="list card" style="margin: 2px 0 0 0 !important" ng-repeat="item in items | orderBy: predicate='title'">
                 <a ng-href="#/app/showpicture/{{item.id}}" class="item item-thumbnail-left">
                     <img ng-src="{{ item.photoURL }}" />
                     <h2>{{ item.title }}</h2>

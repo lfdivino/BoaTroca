@@ -33,7 +33,7 @@ angular.module('sociogram.controllers', [])
 
             $http({
                 method: 'GET',
-                url: 'http://localhost:8080/barterserver/trade/post/list',
+                url: 'http://192.168.1.5:8080/barterserver/trade/post/list',
                 params: userJson
             })
                 .success(function(data, status, headers, config) {
@@ -77,7 +77,7 @@ angular.module('sociogram.controllers', [])
     $scope.facebookLogin = function() {
 
         //REDIRECTT!!!! Retirar**************
-        $location.path('/app/home');
+        //$location.path('/app/home');
         
         OpenFB.login('email, user_birthday').then(
             function(success) {
@@ -109,6 +109,7 @@ angular.module('sociogram.controllers', [])
                     var latitude = window.localStorage['latitude'];
                     var longitude = window.localStorage['longitude'];
                     var password = hex_md5(user.id);
+                    var accessToken = window.sessionStorage['fbtoken'];
 
                     /* TEMOS QUE FAZER O MD5 */                    
 
@@ -118,12 +119,13 @@ angular.module('sociogram.controllers', [])
                         'user.age': age,
                         'user.password': password,
                         'user.loc_lat': latitude,
-                        'user.loc_long': longitude
+                        'user.loc_long': longitude,
+                        'user.accessToken': accessToken
                     };
 
                     $http({
                         method: 'GET',
-                        url: 'http://localhost:8080/barterserver/user/post/save',
+                        url: 'http://192.168.1.5:8080/barterserver/user/post/save',
                         params: userJson
                     }).
                     success(function(data, status, headers, config) {
@@ -134,6 +136,7 @@ angular.module('sociogram.controllers', [])
                         window.localStorage['sessao.email'] = data.email;
                         window.localStorage['sessao.age'] = data.age;
                         window.localStorage['sessao.password'] = data.password;
+                        window.localStorage['sessao.accessToken'] = data.accessToken;
 
 
                         //REDIRECTT!!!!
@@ -377,7 +380,7 @@ angular.module('sociogram.controllers', [])
     //=========================================================
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/barterserver/trade/post/list',
+        url: 'http://192.168.1.5:8080/barterserver/trade/post/list',
         params: userJson
     })
         .success(function(data, status, headers, config) {
@@ -434,7 +437,7 @@ angular.module('sociogram.controllers', [])
         $scope.show();
         $http({
             method: 'GET',
-            url: 'http://localhost:8080/barterserver/user/post/mypictures',
+            url: 'http://192.168.1.5:8080/barterserver/user/post/mypictures',
             params: picJson
         })
             .success(function(data, status, headers, config) {
@@ -484,7 +487,7 @@ angular.module('sociogram.controllers', [])
         };
         $http({
             method: 'GET',
-            url: 'http://localhost:8080/barterserver/user/picture/delete',
+            url: 'http://192.168.1.5:8080/barterserver/user/picture/delete',
             params: picJson
         })
             .success(function(data, status, headers, config) {
@@ -536,7 +539,7 @@ angular.module('sociogram.controllers', [])
             };
             $http({
                 method: 'POST',
-                url: 'http://localhost:8080/barterserver/user/new/message',
+                url: 'http://192.168.1.5:8080/barterserver/user/new/message',
                 params: msgJson
             })
                 .success(function() {
@@ -558,7 +561,7 @@ angular.module('sociogram.controllers', [])
         //  @barterserver/user/chat
         $http({
             method: 'GET',
-            url: 'http://localhost:8080/barterserver/user/chat',
+            url: 'http://192.168.1.5:8080/barterserver/user/chat',
             params: chatJson
         })
             .success(function(data, status, headers, config) {
@@ -640,11 +643,11 @@ angular.module('sociogram.controllers', [])
     $scope.onUploadSucess = function() {
         var picJson = {
             'picture.id': $scope.ActualPicId,
-            'picture.photoURL': "http://localhost:8080/pictures/" + $scope.ActualPicId + ".jpg"
+            'picture.photoURL': "http://192.168.1.5:8080/barterserver/pictures/" + $scope.ActualPicId + ".jpg"
         };
         $http({
             method: 'GET',
-            url: 'http://localhost:8080/barterserver/user/post/picture/add',
+            url: 'http://192.168.1.5:8080/barterserver/user/post/picture/add',
             params: picJson
         })
             .success(function(data, status, headers, config) {
@@ -676,7 +679,7 @@ angular.module('sociogram.controllers', [])
             };
             $http({
                 method: 'GET',
-                url: 'http://localhost:8080/barterserver/user/post/picture/add',
+                url: 'http://192.168.1.5:8080/barterserver/user/post/picture/add',
                 params: picJson
             })
                 .success(function(data, status, headers, config) {
@@ -691,7 +694,7 @@ angular.module('sociogram.controllers', [])
                     var params = new Object();
                     options.params = params;
                     var ft = new FileTransfer();
-                    ft.upload(image, encodeURI("http://localhost:8080/barterserver/upload.jsp"), $scope.onUploadSucess, $scope.onUploadFail, options);
+                    ft.upload(image, encodeURI("http://192.168.1.5:8080/barterserver/upload.jsp"), $scope.onUploadSucess, $scope.onUploadFail, options);
                 })
                 .error(function() {
                     $scope.hide();
@@ -726,7 +729,7 @@ angular.module('sociogram.controllers', [])
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/barterserver/search',
+        url: 'http://192.168.1.5:8080/barterserver/search',
         params: userJson
     })
         .success(function(data, status, headers, config) {
@@ -754,7 +757,7 @@ angular.module('sociogram.controllers', [])
 
         $http({
             method: 'GET',
-            url: 'http://localhost:8080/barterserver/trade/post/new',
+            url: 'http://192.168.1.5:8080/barterserver/trade/post/new',
             params: picJson
         }).
         success(function(data, status, headers, config) {
@@ -785,7 +788,7 @@ angular.module('sociogram.controllers', [])
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/barterserver/user/post/mypictures',
+        url: 'http://192.168.1.5:8080/barterserver/user/post/mypictures',
         params: userJson
     }).
     success(function(data, status, headers, config) {
@@ -809,7 +812,7 @@ angular.module('sociogram.controllers', [])
 
         $http({
             method: 'GET',
-            url: 'http://localhost:8080/barterserver/trade/post/update',
+            url: 'http://192.168.1.5:8080/barterserver/trade/post/update',
             params: picJson
         }).
         success(function(data, status, headers, config) {
@@ -825,3 +828,5 @@ angular.module('sociogram.controllers', [])
 .controller('categoriesCtrl', function($scope, $rootScope, $http, $state, $window) {
         
 });
+
+

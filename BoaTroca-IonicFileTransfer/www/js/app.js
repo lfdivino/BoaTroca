@@ -3,7 +3,7 @@ angular.module('sociogram', ['ionic', 'openfb', 'sociogram.controllers'])
 
 .run(function($rootScope, $state, $ionicPlatform, $window, OpenFB) {
 
-    //OpenFB.init('489987941127071','http://localhost/BoaTroca-Ionic/www/oauthcallback.html',window.localStorage);
+    //OpenFB.init('489987941127071','http://localhost:8080/BoaTroca-Ionic/www/oauthcallback.html',window.localStorage);
     //OpenFB.init('489987941127071','https://www.facebook.com/connect/login_success.html', window.localStorage);
     OpenFB.init('489987941127071');
 
@@ -165,4 +165,3 @@ angular.module('sociogram', ['ionic', 'openfb', 'sociogram.controllers'])
     $urlRouterProvider.otherwise('/app/home');
 
 });
-
